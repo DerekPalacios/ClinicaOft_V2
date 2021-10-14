@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ClinicaOft_V2_UI</title>
+    <link rel="stylesheet" href="~/Scss/css/NavBarMain.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/Scss/css/TableTemplate.css" />
+    <link rel="stylesheet" href="~/Scss/css/MainClassObj.css" />
+    <link rel="stylesheet" href="~/Scss/css/containerMain.css" />
+
+</head>
+<body>
+    <header class="headerMain">
+        <div class="init">
+            <img src="~/src/logo.svg" alt="logo">
+            <strong>Cl&iacute;nica Oftalmol&oacute;gica</strong>
+
+        </div>
+        <nav>
+            <ul id="navUl" class="navUL">
+                <li class="ActiveUl" id="citasNavRef">
+                    <a   onclick="activeNavItem('citasNavRef')" asp-area="" asp-controller="Home" asp-action="Index"><span>Citas</span></a>
+                </li>
+                <li id="oftalNavRef">
+                    <a onclick="activeNavItem('oftalNavRef')" asp-area="" asp-controller="Home" asp-action="Index"><span>Oftalmol&oacute;los</span></a>
+                </li>
+                <li id="clienteNavRef">
+                    <a onclick="activeNavItem('clienteNavRef')" asp-area="" asp-controller="ClienteMainView" asp-action="MainIndex"><span>Clientes</span></a>
+                </li>
+                <li id="pacienteNavRef">
+                    <a onclick="activeNavItem('pacienteNavRef')" asp-area=""  asp-controller="PacienteMainView" asp-action="MainIndex"><span>Pacientes</span></a>
+                </li>
+                             
+
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="containerCustom">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ClinicaOft_V2_UI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

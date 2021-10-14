@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/scss/NavBarMain.css",
+    "inputFile": "wwwroot/Scss/scss/NavBarMain.scss"
+  },
+  {
+    "outputFile": "wwwroot/Scss/css/containerMain.css",
+    "inputFile": "wwwroot/Scss/scss/containerMain.scss"
+  },
+  {
+    "outputFile": "wwwroot/Scss/css/MainClassObj.css",
+    "inputFile": "wwwroot/Scss/scss/MainClassObj.scss"
+  }
+]

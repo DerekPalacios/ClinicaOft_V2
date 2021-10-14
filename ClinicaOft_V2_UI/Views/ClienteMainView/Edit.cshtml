@@ -1,0 +1,90 @@
+﻿@model Capa_Logica_Negocio.Models.ClienteModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="containerCustom">
+    <div class="grid-c-x2">
+
+        <aside class="sideBar">
+            <ul class="sideBarUL">
+                <li>
+                    <button type="button" class="btnSideBar">
+                        Nueva Cita
+
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Control de Citas
+
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Cancelar Cita
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Reprogramaci&oacute;n
+
+                    </button>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="containerCustom">
+       
+            <br />
+
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id_Cliente" />
+                        <div class="form-group">
+                            <label asp-for="Nombres_Cliente" class="control-label"></label>
+                            <input asp-for="Nombres_Cliente" class="form-control" />
+                            <span asp-validation-for="Nombres_Cliente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Apellidos_Cliente" class="control-label"></label>
+                            <input asp-for="Apellidos_Cliente" class="form-control" />
+                            <span asp-validation-for="Apellidos_Cliente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Telefono_Cliente" class="control-label"></label>
+                            <input asp-for="Telefono_Cliente" class="form-control" />
+                            <span asp-validation-for="Telefono_Cliente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Direccion_Cliente" class="control-label"></label>
+                            <input asp-for="Direccion_Cliente" class="form-control" />
+                            <span asp-validation-for="Direccion_Cliente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

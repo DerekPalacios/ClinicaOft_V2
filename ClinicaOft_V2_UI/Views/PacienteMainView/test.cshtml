@@ -1,0 +1,45 @@
+﻿@model Capa_Logica_Negocio.Models.PacienteModel
+
+<h4>PacienteModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="test">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_Paciente" />
+            <div class="form-group">
+                <label asp-for="Nombres_Paciente" class="control-label"></label>
+                <input asp-for="Nombres_Paciente" class="form-control" />
+                <span asp-validation-for="Nombres_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellidos_Paciente" class="control-label"></label>
+                <input asp-for="Apellidos_Paciente" class="form-control" />
+                <span asp-validation-for="Apellidos_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Edad_Paciente" class="control-label"></label>
+                <input asp-for="Edad_Paciente" class="form-control" />
+                <span asp-validation-for="Edad_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono_Paciente" class="control-label"></label>
+                <input asp-for="Telefono_Paciente" class="form-control" />
+                <span asp-validation-for="Telefono_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion_Paciente" class="control-label"></label>
+                <input asp-for="Direccion_Paciente" class="form-control" />
+                <span asp-validation-for="Direccion_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,142 @@
+﻿$primary-color: rgba(134, 247, 255, 0.233);
+$second-color: #2600ff;
+$primary-font: 'Source Sans Pro', sans-serif;
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.containerCustom {
+    width:100%;
+}
+
+.grid-c-x2{
+    display:grid;
+    grid-template-columns:20% 80%;
+}
+.sideBar {
+    margin:0px;
+    height: 80vh;
+    background: #f2f2f2;
+    width:100%;
+    max-width:250px;
+
+    & ul {
+        list-style: none;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+
+        & li {
+            width: 100%;
+            border-bottom-left-radius: 15px;
+            border-right: 1px solid transparent;
+            display: flex;
+            justify-content: center;
+            
+
+            &:hover {
+                border-color: $second-color;
+            }
+
+            & button{
+                background: transparent;
+                border-radius: 10px;
+                width: 200px;
+                height: 50px;
+                border: none;
+                text-align: left;
+                font-size: 20px;
+                font-family: $primary-font;
+                line-height:100%;
+              
+                
+                &:hover {
+                    background: $primary-color;
+                    color: $second-color;
+                }
+            }
+        }
+    }
+}
+
+.headerMain {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #f2f2f2;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    transition: border-color ease-out 700ms;
+
+    & .init {
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+        align-items: center;
+        user-select: none;
+
+        & img {
+            margin-left: 20px;
+            margin-right: 40px;
+            width: 60px;
+            height: 60px;
+        }
+
+        & strong {
+            font-size: 35px;
+        }
+    }
+
+
+
+
+    & nav {
+        height: 100%;
+
+        & ul {
+            margin: 0px;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+
+            & li {
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    border-color: $second-color;
+                }
+
+                margin: 0px;
+                align-items: center;
+                display: flex;
+
+                &.ActiveUl {
+                    border-color: $second-color;
+                }
+
+                & a {
+                    transition: background ease-in 100ms;
+                    text-decoration: none;
+                    padding: 6px 8px;
+                    border-radius: 7px;
+                    font-size: 25px;
+                    color: black;
+
+                    &:hover {
+                        background: $primary-color;
+                        color: $second-color;
+                    }
+
+                    & span {
+                        user-select: none;
+                    }
+                }
+            }
+        }
+    }
+}

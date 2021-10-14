@@ -1,0 +1,94 @@
+﻿@model Capa_Logica_Negocio.Models.PacienteModel
+
+@{
+    ViewData["Title"] = "DeletePaciente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DeletePaciente</h1>
+
+<div class="containerCustom">
+    <div class="grid-c-x2">
+
+        <aside class="sideBar">
+            <ul class="sideBarUL">
+                <li>
+                    <button type="button" class="btnSideBar">
+                        Nueva Cita
+
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Control de Citas
+
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Cancelar Cita
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Reprogramaci&oacute;n
+
+                    </button>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container-fluid">
+            <div>
+                <h4>PacienteModel</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Nombres_Paciente)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Nombres_Paciente)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Apellidos_Paciente)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Apellidos_Paciente)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Edad_Paciente)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Edad_Paciente)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Telefono_Paciente)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Telefono_Paciente)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Direccion_Paciente)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Direccion_Paciente)
+                    </dd>
+                </dl>
+
+                <form method="post" asp-action="DeletePaciente" asp-controller="PacienteMainView">
+                    <input type="hidden" asp-for="Id_Paciente" />
+                    <input type="submit" value="Delete" class="btn btn-danger" /> |
+                    <a asp-controller="PacienteMainView" asp-action="MainIndex">Back to List</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<h3>Are you sure you want to delete this?</h3>
