@@ -28,7 +28,7 @@ namespace Capa_Logica_Negocio.Models
         public int Edad_Paciente { get; set; }
 
         [Required(ErrorMessage = " Especifique un Número Telefónico Válido ")]
-        [StringLength(12, ErrorMessage = "El {0} debe ser al menos {2} y maximo {1} caracteres", MinimumLength = 8)]
+        [StringLength(12, ErrorMessage = "El {0} debe ser al menos {2} y maximo {1} caracteres, prueba git", MinimumLength = 8)]
         [Display(Name = "Teléfono")]
         public string Telefono_Paciente { get; set; }
 
