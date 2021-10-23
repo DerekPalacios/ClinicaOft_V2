@@ -12,7 +12,7 @@ namespace ClinicaOft_V2_UI.Views.ViewComponents.DetallesCliente
 
         public IViewComponentResult Invoke()
         {
-            return View(clienteModel.getClienteIdDetails());
+            return View(clienteModel.getClienteDetailsForDDL());
         }
 
 
