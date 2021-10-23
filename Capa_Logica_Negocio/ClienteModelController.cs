@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Capa_Logica_Negocio.Models;
 using Capa_Logica_Negocio.Context;
+using Capa_Logica_Negocio.Components_Controllers;
 namespace Capa_Logica_Negocio
 {
     
@@ -79,5 +80,13 @@ namespace Capa_Logica_Negocio
             }
         }
 
+
+        public IEnumerable<clienteDetails> getClienteIdDetails()
+        {
+            IEnumerable<clienteDetails> clienteDetails = from ClienteModel in GetClienteList()
+                          select new clienteDetails { IdCliente = ClienteModel.Id_Cliente, NombresCliente= ClienteModel.Nombres_Cliente +" "+ClienteModel.Apellidos_Cliente };
+            return clienteDetails;
+                         
+        }
     }
 }
