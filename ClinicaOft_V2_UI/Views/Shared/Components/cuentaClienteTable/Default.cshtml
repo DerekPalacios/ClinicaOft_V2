@@ -33,7 +33,7 @@
             {
 
                 <div class="row user-select-none" style="cursor:pointer"  data-toggle="collapse" data-target="#colapseFile-@item.Id_Cuenta.ToString()" aria-expanded="true" aria-controls="colapseFile-@item.Id_Cuenta.ToString()">
-                    <div class="row selHover mx-auto">
+                    <div class=" row mx-auto selHover">
 
                         <div class="col-2">
                             @Html.DisplayFor(modelItem => item.Saldo_Cuenta)
@@ -54,8 +54,15 @@
 
                 </div>
                 <div id="colapseFile-@item.Id_Cuenta.ToString()" class="collapse" data-parent="#cuentaColapse">
-                    <div class="card-body">
-                        y aca va el texto, supongo
+                    <div class="card-body row mx-auto">
+                        <div class=" col-6 ">
+                            aca va una informacion, de preferencia los ingresos de las cuentas o una pequeña lista de ellos<hr/>
+                            que sean 10 mejor, los 10 ultimos realizados
+                        </div>
+                         <div class="col-6">
+                            aca va otra, de preferencia los egresos de las cuentas o una breve descripcion de ellos<hr/>
+                            igual que sean 10, parta fines practicos
+                        </div>
                     </div>
                 </div>
             }

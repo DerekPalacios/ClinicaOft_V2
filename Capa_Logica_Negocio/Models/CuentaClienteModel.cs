@@ -17,6 +17,7 @@ namespace Capa_Logica_Negocio.Models
         [Required]
         [Column(TypeName = "decimal (18,4)")]
         [Display(Name = "Saldo")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Saldo_Cuenta {  get; set; }
 
         [Required]
