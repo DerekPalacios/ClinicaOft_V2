@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Views\ClienteMainView\Components\" />
+    <Folder Include="wwwroot\js\JsPaginas\" />
   </ItemGroup>
 
 </Project>

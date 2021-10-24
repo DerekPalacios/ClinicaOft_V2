@@ -10,3 +10,13 @@
 
 .selHover:hover {
   font-weight: 500; }
+
+.cuentaClienteTableAcordion .InactiveAccordion {
+  background: red;
+  /*height: 0;
+        overflow: hidden;
+        pointer-events: none;*/ }
+
+.cuentaClienteTableAcordion .ActiveAccordion {
+  height: auto;
+  pointer-events: auto; }

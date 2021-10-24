@@ -18,3 +18,18 @@
         font-weight:500;
     }
 }
+.cuentaClienteTableAcordion {
+    & .InactiveAccordion {
+        background:red;
+        /*height: 0;
+        overflow: hidden;
+        pointer-events: none;*/
+    }
+
+    & .ActiveAccordion{
+    height:auto;
+    pointer-events:auto;
+}
+}
+
+
