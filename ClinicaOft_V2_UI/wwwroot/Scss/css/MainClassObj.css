@@ -11,12 +11,17 @@
 .selHover:hover {
   font-weight: 500; }
 
-.cuentaClienteTableAcordion .InactiveAccordion {
-  background: red;
-  /*height: 0;
-        overflow: hidden;
-        pointer-events: none;*/ }
+.cuentaClienteTableAcordion .selectRow:hover {
+  background: #989898ad; }
 
-.cuentaClienteTableAcordion .ActiveAccordion {
-  height: auto;
-  pointer-events: auto; }
+.cuentaClienteTableAcordion .selectRow .contenAcordion {
+  transition: all .5s linear;
+  max-height: 0px;
+  overflow: hidden; }
+
+.cuentaClienteTableAcordion .selectRow .InactiveAccordion {
+  max-height: 0px; }
+
+.cuentaClienteTableAcordion .selectRow .ActiveAccordion {
+  max-height: 300px;
+  background: white; }

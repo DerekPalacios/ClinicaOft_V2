@@ -32,6 +32,7 @@ namespace Capa_Logica_Negocio.Models
 
         [Required]
         [Display(Name ="Saldada")]
+        [UIHint("IsActive")]
         public bool Saldada { get; set; }
 
         [Required]
