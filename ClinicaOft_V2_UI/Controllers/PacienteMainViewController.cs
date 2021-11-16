@@ -40,7 +40,7 @@ namespace ClinicaOft_V2_UI.Controllers
                 }
                 else
                 {
-                    TempData["mensaje"] = "El libro no se ha creado!";
+                    TempData["mensaje"] = "El Paciente no se ha creado!";
                     return View();
                 }
             }
