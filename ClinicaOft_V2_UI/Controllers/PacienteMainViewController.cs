@@ -34,7 +34,7 @@ namespace ClinicaOft_V2_UI.Controllers
                 var pacienteIsAdded = pacienteModel.AddPaciente(paciente);
                 if (pacienteIsAdded)
                 {
-                    TempData["mensaje"] = "El libro se ha creado correctamente";
+                    TempData["mensaje"] = "El Paciente se ha creado correctamente";
                     return RedirectToAction("MainIndex");
 
                 }
