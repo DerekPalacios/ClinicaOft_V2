@@ -35,13 +35,13 @@ namespace ClinicaOft_V2_UI.Controllers
                 var clienteIsAdded = clienteModel.AddCliente(cliente);
                 if (clienteIsAdded)
                 {
-                    TempData["mensaje"] = "El libro se ha creado correctamente";
+                    TempData["mensaje"] = "El Cliente se ha creado correctamente";
                     return RedirectToAction("MainIndex");
 
                 }
                 else
                 {
-                    TempData["mensaje"] = "El libro no se ha creado!";
+                    TempData["mensaje"] = "El Cliente no se ha creado!";
                     return View();
                 }
             }
