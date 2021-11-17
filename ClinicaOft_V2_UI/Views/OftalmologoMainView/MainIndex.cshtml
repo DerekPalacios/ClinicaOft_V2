@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Capa_Logica_Negocio.Models.OftalmologoModel>
+
+@{
+    ViewData["Title"] = "MainIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="containerCustom">
+    <div class="grid-c-x2">
+
+        @* Menu Lateral*@
+        <aside class="sideBar">
+            <ul class="sideBarUL">
+                <li>
+                    <button type="button" class="btnSideBar">
+                        Clientes
+
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Cuentas
+
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btnSideBar">
+                        Historial de Cuentas
+                    </button>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container-fluid">
+            <div class="row mt-2">
+                <div class="col-sm-6">
+                    <h3>Lista de Oftalmologo Ingresados</h3>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-success d-block" asp-action="Create" asp-controller="OftalmologoMainView">Nuevo Oftalmologo</a>
+                </div>
+            </div>
+
+            <br />
+            <div class="row w-100 h-75 overflow-auto  m-auto">
+                @if (Model.Count() > 0)
+                {
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nombres_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Apellidos_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Edad_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Telefono_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Direccion_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Especialidad_Oftalmologo)
+                                </th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombres_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Apellidos_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Edad_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telefono_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Direccion_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Especialidad_Oftalmologo)
+                                </td>
+                                <td>
+                                    <a asp-controller="ClienteMainView" class=" text-decoration-none" asp-action="Edit" asp-route-id="@item.Id_Oftalmologo">
+                                        <img src="~/src/pencil.svg" alt="del-img-trash" class="editPencil" />
+                                    </a> |
+                                    <a asp-action="Delete" class=" text-decoration-none" asp-route-id="@item.Id_Oftalmologo">
+                                        <img src="~/src/trash.svg" alt="edit-img-pencil" class="deleteTrash" />
+                                    </a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-warning " role="alert">
+                        <h4 class="alert-heading">Base de Datos Vacia!</h4>
+                        <p>Los Oftalmologos ingresados se visualizar&aacute;n aqu&iacute;</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
