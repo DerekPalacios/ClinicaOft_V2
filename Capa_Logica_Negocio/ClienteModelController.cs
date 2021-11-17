@@ -8,7 +8,7 @@ using Capa_Logica_Negocio.Models;
 using Capa_Logica_Negocio.Context;
 namespace Capa_Logica_Negocio
 {
-    
+
     public class ClienteModelController
     {
 
@@ -21,10 +21,11 @@ namespace Capa_Logica_Negocio
         {
             try
             {
-               _context.tbl_Cliente.Add(cliente);
+                _context.tbl_Cliente.Add(cliente);
                 _context.SaveChanges();
                 return true;
-            }catch (Exception)
+            }
+            catch (Exception)
             {
                 return false;
             }
@@ -35,7 +36,7 @@ namespace Capa_Logica_Negocio
             try
             {
                 var cliente = _context.tbl_Cliente.Find(Idcliente);
-                if(cliente == null)
+                if (cliente == null)
                 {
                     return null;
                 }
@@ -79,5 +80,11 @@ namespace Capa_Logica_Negocio
             }
         }
 
+        public IEnumerable<object> getClienteDetailsForDDL()
+        {
+            IEnumerable<object> clienteDetails = from ClienteModel in GetClienteList()
+                                                 select new { IdCliente = ClienteModel.Id_Cliente, NombresCliente = ClienteModel.Nombres_Cliente + " " + ClienteModel.Apellidos_Cliente };
+            return clienteDetails;
+        }
     }
 }

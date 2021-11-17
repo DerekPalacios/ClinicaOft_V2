@@ -16,15 +16,23 @@ namespace Capa_Logica_Negocio.Models
 
         [Required]
         [Column(TypeName = "decimal (18,4)")]
+        [Display(Name = "Saldo")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Saldo_Cuenta {  get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0: dd / MM / yyyy}")]
+        [Display(Name = "Fecha Creación")]
         public DateTime Fecha_Cuenta { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0: dd / MM / yyyy}")]
+        [Display(Name = "Fecha Cancelación")]
         public DateTime Fecha_Cancelacion_Cuenta { get; set; }
 
         [Required]
+        [Display(Name ="Saldada")]
+        [UIHint("IsActive")]
         public bool Saldada { get; set; }
 
         [Required]

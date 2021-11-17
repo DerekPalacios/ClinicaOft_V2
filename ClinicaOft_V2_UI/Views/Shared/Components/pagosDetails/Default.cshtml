@@ -1,0 +1,59 @@
+﻿@model IEnumerable<object>
+
+@if (Model.Count()!=0)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    <strong>Pagador</strong>
+                </th>
+                <th>
+                    <strong>Concepto</strong>
+                </th>
+                <th>
+                    <strong>Fecha de Pago</strong>
+                </th>
+                <th>
+                    <strong>Monto</strong>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <span>item.pagador</span>
+                    </td>
+
+                    <td>
+                        <span>item.Concepto</span>
+                    </td>
+                    <td>
+                        <span>item.FechaPago</span>
+                    </td>
+                    <td>
+                        <span>item.Monto</span>
+                    </td>
+
+                </tr>
+
+            }
+
+
+        </tbody>
+
+
+    </table>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+       Sin registros
+    </div>
+}
+
+
+
+
