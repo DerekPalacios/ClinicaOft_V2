@@ -21,7 +21,7 @@ namespace Capa_Logica_Negocio
            
             if (idCuenta.HasValue)
             {
-                 var pagos= from pago in GetPagoList()
+                 var pagos= (from pago in GetPagoList()
                             where pago.IdCuenta_Pago == idCuenta
                             select new
                             {
@@ -29,7 +29,7 @@ namespace Capa_Logica_Negocio
                                 Concepto = pago.Concepto_Pago,
                                 FechaPago = pago.Fecha_Pago,
                                 Monto = pago.Monto_Pago
-                            };
+                            }).Take(10);
                 return pagos;
             }
             else
