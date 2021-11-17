@@ -51,16 +51,22 @@
                         <thead>
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Nombres_Cliente)
+                                    @Html.DisplayNameFor(model => model.Nombres_Oftalmologo)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Apellidos_Cliente)
+                                    @Html.DisplayNameFor(model => model.Apellidos_Oftalmologo)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Telefono_Cliente)
+                                    @Html.DisplayNameFor(model => model.Edad_Oftalmologo)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Direccion_Cliente)
+                                    @Html.DisplayNameFor(model => model.Telefono_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Direccion_Oftalmologo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Especialidad_Oftalmologo)
                                 </th>
                                 <th>Opciones</th>
                             </tr>
@@ -68,28 +74,34 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Nombres_Cliente)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Apellidos_Cliente)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Telefono_Cliente)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Direccion_Cliente)
-                                    </td>
-                                    <td >
-                                        <a asp-controller="ClienteMainView" class=" text-decoration-none" asp-action="Edit" asp-route-id="@item.Id_Cliente">
-                                            <img src="~/src/pencil.svg" alt="del-img-trash" class="editPencil" />
-                                        </a> | 
-                                        <a asp-action="Delete" class=" text-decoration-none" asp-route-id="@item.Id_Cliente">
-                                            <img src="~/src/trash.svg" alt="edit-img-pencil" class="deleteTrash" />
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombres_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Apellidos_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Edad_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telefono_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Direccion_Oftalmologo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Especialidad_Oftalmologo)
+                                </td>
+                                <td>
+                                    <a asp-controller="ClienteMainView" class=" text-decoration-none" asp-action="Edit" asp-route-id="@item.Id_Oftalmologo">
+                                        <img src="~/src/pencil.svg" alt="del-img-trash" class="editPencil" />
+                                    </a> |
+                                    <a asp-action="Delete" class=" text-decoration-none" asp-route-id="@item.Id_Oftalmologo">
+                                        <img src="~/src/trash.svg" alt="edit-img-pencil" class="deleteTrash" />
+                                    </a>
+                                </td>
+                            </tr>
                             }
                         </tbody>
                     </table>
@@ -98,7 +110,7 @@
                 {
                     <div class="alert alert-warning " role="alert">
                         <h4 class="alert-heading">Base de Datos Vacia!</h4>
-                        <p>Los clientes ingresados se visualizar&aacute;n aqu&iacute;</p>
+                        <p>Los Oftalmologos ingresados se visualizar&aacute;n aqu&iacute;</p>
                     </div>
                 }
             </div>
