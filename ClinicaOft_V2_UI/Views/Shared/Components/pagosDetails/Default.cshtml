@@ -1,40 +1,40 @@
-﻿@model IEnumerable<object>
+﻿@model IEnumerable<Capa_Logica_Negocio.Models.PagoModel>
 
-@if (Model.Count()!=0)
+@if (Model.Count() != 0)
 {
-    <table class="table table-hover">
+    <table class="table table-borderless table-sm table-hover mb-2">
         <thead>
             <tr>
                 <th>
-                    <strong>Pagador</strong>
+                    @Html.DisplayNameFor(model=> model.Pagador_Pago)
                 </th>
                 <th>
-                    <strong>Concepto</strong>
+                    @Html.DisplayNameFor(model=> model.Concepto_Pago)
                 </th>
                 <th>
-                    <strong>Fecha de Pago</strong>
+                    @Html.DisplayNameFor(model=> model.Fecha_Pago)
                 </th>
                 <th>
-                    <strong>Monto</strong>
+                    @Html.DisplayNameFor(model=> model.Monto_Pago)
                 </th>
             </tr>
         </thead>
-        <tbody>
-            @foreach (var item in Model)
+        <tbody >
+
+            @foreach (var item in @Model)
             {
                 <tr>
                     <td>
-                        <span>item.pagador</span>
-                    </td>
-
-                    <td>
-                        <span>item.Concepto</span>
+                        @Html.DisplayFor(modelItem=> item.Pagador_Pago)
                     </td>
                     <td>
-                        <span>item.FechaPago</span>
+                        @Html.DisplayFor(modelItem=> item.Concepto_Pago)
                     </td>
                     <td>
-                        <span>item.Monto</span>
+                        @Html.DisplayFor(modelItem=> item.Fecha_Pago)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem=> item.Monto_Pago)
                     </td>
 
                 </tr>
@@ -50,7 +50,7 @@
 else
 {
     <div class="alert alert-warning" role="alert">
-       Sin registros
+        Sin registros
     </div>
 }
 
