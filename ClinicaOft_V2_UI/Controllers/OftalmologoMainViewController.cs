@@ -94,7 +94,7 @@ namespace ClinicaOft_V2_UI.Controllers
         //Http post Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteLibro(OftalmologoModel oftalmologo)
+        public IActionResult DeleteOftalmologo(OftalmologoModel oftalmologo)
         {
             //obtener  el libro por id
             var clienteIsDeleted = OftalmologoModel.DeleteOftalmologo(oftalmologo);

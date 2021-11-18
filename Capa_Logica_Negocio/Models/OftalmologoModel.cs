@@ -21,7 +21,6 @@ namespace Capa_Logica_Negocio.Models
 
 
         [Required]
-        [StringLength(maximumLength:2,MinimumLength =1, ErrorMessage ="Ingrese una edad Valida")]
         public int Edad_Oftalmologo { get; set; }
 
         [Required(ErrorMessage = " Especifique un Número Telefónico Válido ")]
