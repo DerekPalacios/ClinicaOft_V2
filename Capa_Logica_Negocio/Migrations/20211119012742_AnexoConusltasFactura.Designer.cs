@@ -4,14 +4,16 @@ using Capa_Logica_Negocio.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Capa_Logica_Negocio.Migrations
 {
     [DbContext(typeof(ClinicaDBContext))]
-    partial class ClinicaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211119012742_AnexoConusltasFactura")]
+    partial class AnexoConusltasFactura
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
