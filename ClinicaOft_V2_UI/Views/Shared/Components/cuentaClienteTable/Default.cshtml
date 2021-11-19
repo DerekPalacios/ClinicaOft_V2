@@ -59,8 +59,7 @@
                                 @await Component.InvokeAsync("pagosDetails", new { idCuenta = item.Id_Cuenta});
                             </div>
                             <div class="col-6">
-                                aca va otra, de preferencia los egresos de las cuentas o una breve descripcion de ellos<hr />
-                                igual que sean 10, parta fines practicos
+                                @await Component.InvokeAsync("creditoConsultaDetails", new { idCuenta = item.Id_Cuenta});
                             </div>
                         </div>
                     </div>
