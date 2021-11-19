@@ -36,6 +36,7 @@ namespace Capa_Logica_Negocio.Models
         [Required]
         [Display(Name = "Monto")]
         [Column(TypeName = "decimal (18,4)")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Monto_Pago { get; set; }
 
     }

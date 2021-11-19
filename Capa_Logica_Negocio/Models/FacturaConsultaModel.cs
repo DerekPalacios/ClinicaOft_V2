@@ -39,15 +39,18 @@ namespace Capa_Logica_Negocio.Models
         public decimal IVA_Factura_Consulta { get; set; }
 
         [Column(TypeName = "decimal (18,4)")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal SubTotal_Factura_Consulta { get; set; }
 
         [Column(TypeName = "decimal (18,4)")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Total_Factura_Consulta { get; set; }
 
         [Required]
         public bool Acreditada_Factura_Consulta { get; set; }
 
         [Column(TypeName = "decimal (18,4)")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Deposito_Factura_Consulta { get; set; }
 
 
