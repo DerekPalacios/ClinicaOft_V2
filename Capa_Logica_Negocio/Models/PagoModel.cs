@@ -14,7 +14,7 @@ namespace Capa_Logica_Negocio.Models
         public int Id_Pago { get; set; }
 
         [Required]
-        [Display(Name = "Id Cuenta")]
+        [Display(Name = "Cuenta")]
         public int IdCuenta_Pago { get; set; }
 
         [ForeignKey("IdCuenta_Pago")]

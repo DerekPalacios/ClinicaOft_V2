@@ -7,11 +7,11 @@ namespace Capa_Logica_Negocio.Models
     public class CreditoConsultaModel
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "Id Credito")]
+        [Display(Name = "Credito")]
         public int Id_Credito_Consulta { get; set; }
 
         [Required]
-        [Display(Name = "Id Factura")]
+        [Display(Name = "Factura")]
         public int IdFacturaConsulta_Credito_Consulta { get; set; }
         [ForeignKey("IdFacturaConsulta_Credito_Consulta")]
         public FacturaConsultaModel FacturaConsulta { get; set; }
@@ -21,7 +21,7 @@ namespace Capa_Logica_Negocio.Models
         public DateTime Fecha_Credito_Consulta { get; set; }
 
         [Required]
-        [Display(Name = "Id Cuenta")]
+        [Display(Name = "Cuenta")]
         public int IdCuentaCliente_Credito_Consulta { get; set; }
         [ForeignKey("IdCuentaCliente_Credito_Consulta")]
         public CuentaClienteModel CuentaCliente { get; set; }
