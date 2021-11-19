@@ -14,6 +14,7 @@ namespace Capa_Logica_Negocio.Models
         public int Id_Pago { get; set; }
 
         [Required]
+        [Display(Name = "Id Cuenta")]
         public int IdCuenta_Pago { get; set; }
 
         [ForeignKey("IdCuenta_Pago")]
@@ -21,15 +22,18 @@ namespace Capa_Logica_Negocio.Models
 
 
         [Required]
+        [Display(Name = "Fecha")]
         public DateTime Fecha_Pago { get; set; }
 
         [Required]
+        [Display(Name = "Concepto")]
         public string Concepto_Pago { get; set; }
 
         [Required]
         public string Pagador_Pago { get; set; }
 
         [Required]
+        [Display(Name = "Monto")]
         [Column(TypeName = "decimal (18,4)")]
         public decimal Monto_Pago { get; set; }
 
