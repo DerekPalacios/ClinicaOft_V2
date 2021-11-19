@@ -31,6 +31,7 @@ namespace Capa_Logica_Negocio.Models
         public string Concepto_Pago { get; set; }
 
         [Required]
+        [Display(Name = "Pagador")]
         public string Pagador_Pago { get; set; }
 
         [Required]
