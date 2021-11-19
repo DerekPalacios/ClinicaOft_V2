@@ -18,6 +18,7 @@ namespace Capa_Logica_Negocio.Models
 
         [Required]
         [Display(Name = "Fecha")]
+        [DisplayFormat(DataFormatString = "{0: dd / MM / yyyy}")]
         public DateTime Fecha_Credito_Consulta { get; set; }
 
         [Required]
@@ -28,6 +29,7 @@ namespace Capa_Logica_Negocio.Models
 
         [Required]
         [Display(Name = "Monto")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         [Column(TypeName ="decimal (18,4")]
         public decimal Monto_Credito_Consulta { get; set; }
 
