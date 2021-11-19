@@ -23,6 +23,7 @@ namespace Capa_Logica_Negocio.Models
 
         [Required]
         [Display(Name = "Fecha")]
+        [DisplayFormat(DataFormatString = "{0: dd / MM / yyyy}")]
         public DateTime Fecha_Pago { get; set; }
 
         [Required]
