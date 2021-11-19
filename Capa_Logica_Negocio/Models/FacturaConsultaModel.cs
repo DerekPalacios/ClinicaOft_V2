@@ -22,6 +22,14 @@ namespace Capa_Logica_Negocio.Models
         [ForeignKey("IdCliente_Factura_Consulta")]
         public ClienteModel Cliente { get; set; }
 
+
+        [Required]
+        public int IdConsulta_Factura_Consulta { get; set; }
+
+        [ForeignKey("IdConsulta_Factura_Consulta")]
+        public ConsultaModel Consulta { get; set; }
+
+
         [Required]
         public int IdCita_Factura_Consulta { get; set; }
         [ForeignKey("IdCita_Factura_Consulta")]
