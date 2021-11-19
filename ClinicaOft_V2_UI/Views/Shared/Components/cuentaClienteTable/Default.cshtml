@@ -58,7 +58,7 @@
                             <div class=" col-6 overflow-auto p-1" style="height:500px">
                                 @await Component.InvokeAsync("pagosDetails", new { idCuenta = item.Id_Cuenta});
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 overflow-auto p-1">
                                 @await Component.InvokeAsync("creditoConsultaDetails", new { idCuenta = item.Id_Cuenta});
                             </div>
                         </div>
