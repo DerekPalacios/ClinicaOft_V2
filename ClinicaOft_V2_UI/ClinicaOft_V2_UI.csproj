@@ -30,7 +30,6 @@
   <ItemGroup>
     <Folder Include="Views\ClienteMainView\Components\" />
     <Folder Include="Views\CuentasClientesMainViews\" />
-    <Folder Include="Views\ViewComponents\Creditos Components\" />
     <Folder Include="wwwroot\js\JsPaginas\" />
   </ItemGroup>
 
