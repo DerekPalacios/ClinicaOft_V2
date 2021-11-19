@@ -55,12 +55,11 @@
                     </div>
                     <div id="colapseFile-@item.Id_Cuenta.ToString()" class="InactiveAccordion contenAcordion">
                         <div class="card-body row mx-auto">
-                            <div class=" col-6 ">
-                                @await Component.InvokeAsync("pagosDetails", new { idCuenta = 1002});
+                            <div class=" col-6 overflow-auto p-1" style="height:500px">
+                                @await Component.InvokeAsync("pagosDetails", new { idCuenta = item.Id_Cuenta})
                             </div>
-                            <div class="col-6">
-                                aca va otra, de preferencia los egresos de las cuentas o una breve descripcion de ellos<hr />
-                                igual que sean 10, parta fines practicos
+                            <div class="col-6 overflow-auto p-1">
+                                @await Component.InvokeAsync("creditoConsultaDetails", new { idCuenta = item.Id_Cuenta})
                             </div>
                         </div>
                     </div>

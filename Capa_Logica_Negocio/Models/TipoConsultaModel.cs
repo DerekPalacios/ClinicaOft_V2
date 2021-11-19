@@ -21,6 +21,7 @@ namespace Capa_Logica_Negocio.Models
 
         [Required]
         [Column(TypeName = "decimal (18,4)")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Precio_Tipo_Consulta { get; set; }
 
     }

@@ -16,21 +16,12 @@ namespace Capa_Logica_Negocio
         public IEnumerable<PagoModel> GetPagoList() => _context.tbl_Pago;
 
 
-        public IEnumerable<object> GetPagoDetailList(int? idCuenta)
+        public IEnumerable<PagoModel> GetPagoDetailList(int? idCuenta)
         {
-           
             if (idCuenta.HasValue)
             {
-                 var pagos= (from pago in GetPagoList()
-                            where pago.IdCuenta_Pago == idCuenta
-                            select new
-                            {
-                                pagador = pago.Pagador_Pago,
-                                Concepto = pago.Concepto_Pago,
-                                FechaPago = pago.Fecha_Pago,
-                                Monto = pago.Monto_Pago
-                            }).Take(10);
-                return pagos;
+                return GetPagoList().Where(items => items.IdCuenta_Pago == idCuenta).TakeLast(10);
+
             }
             else
             {

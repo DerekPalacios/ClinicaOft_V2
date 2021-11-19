@@ -14,6 +14,7 @@ namespace Capa_Logica_Negocio.Models
         public int Id_Consulta { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0: dd / MM / yyyy}")]
         public DateTime Fecha_Consulta { get; set; }
 
         [Required]
