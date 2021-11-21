@@ -6,49 +6,47 @@
 }
 
 <div class="containerCustom">
-    <div class="grid-c-x2">
+ 
 
         @* Menu Lateral*@
         <aside class="sideBar">
             <ul class="sideBarUL">
                 <li>
-                    <button type="button" class="btnSideBar">
+                    <a type="button" href="#headClientes">
                         Clientes
-
-                    </button>
+                    </a>
                 </li>
-
                 <li>
-                    <button class="btnSideBar">
-                        Cuentas
-
-                    </button>
+                    <a type="button" href="#headClientes">
+                        Clientes
+                    </a>
                 </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Historial de Cuentas
-                    </button>
+               <li>
+                    <a type="button" href="#headClientes">
+                        Clientes
+                    </a>
                 </li>
             </ul>
         </aside>
 
-        <div class="container-fluid">
+        <div class="Container-fluid">
+            <div id="headClientes" style="height:90px;"></div> @*esto es para que se ubique bien la primer etiqueta*@
+
             <div class="row mt-2">
                 <div class="col-sm-6">
                     <h3>Lista de Oftalmologo Ingresados</h3>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-4">
                     <a class="btn btn-success d-block" asp-action="Create" asp-controller="OftalmologoMainView">Nuevo Oftalmologo</a>
                 </div>
             </div>
 
             <br />
-            <div class="row w-100 h-75 overflow-auto  m-auto">
+            <div style="max-height:700px" class="row w-100 h-75 overflow-auto  m-auto">
                 @if (Model.Count() > 0)
                 {
                     <table class="table table-hover">
-                        <thead>
+                        <thead class="sticky-top " style="background:#fff">
                             <tr>
                                 <th>
                                     @Html.DisplayNameFor(model => model.Nombres_Oftalmologo)
@@ -116,7 +114,7 @@
             </div>
         </div>
 
-    </div>
+   
 
 
 

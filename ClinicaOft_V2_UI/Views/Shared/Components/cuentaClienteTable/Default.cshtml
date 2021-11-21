@@ -53,9 +53,9 @@
                         </div>
 
                     </div>
-                    <div id="colapseFile-@item.Id_Cuenta.ToString()" class="InactiveAccordion contenAcordion">
-                        <div class="card-body row mx-auto">
-                            <div class=" col-6 overflow-auto p-1" style="height:500px">
+                    <div id="colapseFile-@item.Id_Cuenta.ToString()" class="InactiveAccordion contenAcordion ">
+                        <div class="card-body row mx-auto ">
+                            <div class=" col-6 overflow-auto p-1">
                                 @await Component.InvokeAsync("pagosDetails", new { idCuenta = item.Id_Cuenta})
                             </div>
                             <div class="col-6 overflow-auto p-1">

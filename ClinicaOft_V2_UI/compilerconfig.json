@@ -10,5 +10,9 @@
   {
     "outputFile": "wwwroot/Scss/css/MainClassObj.css",
     "inputFile": "wwwroot/Scss/scss/MainClassObj.scss"
+  },
+  {
+    "outputFile": "wwwroot/Scss/css/NavMain.css",
+    "inputFile": "wwwroot/Scss/scss/NavMain.scss"
   }
 ]

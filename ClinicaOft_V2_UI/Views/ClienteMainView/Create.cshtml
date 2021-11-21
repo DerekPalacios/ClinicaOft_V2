@@ -5,41 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="containerCustom">
-    <div class="grid-c-x2">
-
-        <aside class="sideBar">
-            <ul class="sideBarUL">
-                <li>
-                    <button type="button" class="btnSideBar">
-                        Nueva Cita
-
-                    </button>
-                </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Control de Citas
-
-                    </button>
-                </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Cancelar Cita
-                    </button>
-                </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Reprogramaci&oacute;n
-
-                    </button>
-                </li>
-            </ul>
-        </aside>
-
-        <div class="containerCustom">
+        <div  style="margin-top:90px" class="containerCustom">
             <br />
             <div class="row">
                 <div class="col-sm-2">
@@ -74,20 +40,12 @@
                             <span asp-validation-for="Direccion_Cliente" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <input type="submit" value="Create" class="btn btn-primary" /> |
+                        <a asp-controller="ClienteMainView" asp-action="MainIndex">Back to List</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
 
-    </div>
-
-
-
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+   

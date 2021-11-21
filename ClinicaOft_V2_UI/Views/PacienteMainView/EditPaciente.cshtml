@@ -4,84 +4,46 @@
     ViewData["Title"] = "EditPaciente";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="containerCustom">
-    <div class="grid-c-x2">
+<div style="margin-top:90px" class="containerCustom">
 
-        <aside class="sideBar">
-            <ul class="sideBarUL">
-                <li>
-                    <button type="button" class="btnSideBar">
-                        Nueva Cita
-
-                    </button>
-                </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Control de Citas
-
-                    </button>
-                </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Cancelar Cita
-                    </button>
-                </li>
-
-                <li>
-                    <button class="btnSideBar">
-                        Reprogramaci&oacute;n
-
-                    </button>
-                </li>
-            </ul>
-        </aside>
-
-        <div class="container-fluid">
-
-            <div class="row">
-                <div class="col-md-4">
-                    <form asp-controller="PacienteMainView" method="post" asp-action="EditPaciente">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="Id_Paciente" />
-                        <div class="form-group">
-                            <label asp-for="Nombres_Paciente" class="control-label"></label>
-                            <input asp-for="Nombres_Paciente" class="form-control" />
-                            <span asp-validation-for="Nombres_Paciente" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Apellidos_Paciente" class="control-label"></label>
-                            <input asp-for="Apellidos_Paciente" class="form-control" />
-                            <span asp-validation-for="Apellidos_Paciente" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Edad_Paciente" class="control-label"></label>
-                            <input asp-for="Edad_Paciente" class="form-control" />
-                            <span asp-validation-for="Edad_Paciente" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Telefono_Paciente" class="control-label"></label>
-                            <input asp-for="Telefono_Paciente" class="form-control" />
-                            <span asp-validation-for="Telefono_Paciente" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Direccion_Paciente" class="control-label"></label>
-                            <input asp-for="Direccion_Paciente" class="form-control" />
-                            <span asp-validation-for="Direccion_Paciente" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Save" class="btn btn-primary" />
-                        </div>
-                    </form>
-                </div>
+    <h4>Editando Paciente</h4>
+    <hr />
+    <div class="col-6">
+        <form asp-controller="PacienteMainView" method="post" asp-action="EditPaciente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_Paciente" />
+            <div class="form-group">
+                <label asp-for="Nombres_Paciente" class="control-label"></label>
+                <input asp-for="Nombres_Paciente" class="form-control" />
+                <span asp-validation-for="Nombres_Paciente" class="text-danger"></span>
             </div>
-
-            <div>
-                <a asp-action="MainIndex" asp-controller="PacienteMainView">Back to List</a>
+            <div class="form-group">
+                <label asp-for="Apellidos_Paciente" class="control-label"></label>
+                <input asp-for="Apellidos_Paciente" class="form-control" />
+                <span asp-validation-for="Apellidos_Paciente" class="text-danger"></span>
             </div>
-
-        </div>
+            <div class="form-group">
+                <label asp-for="Edad_Paciente" class="control-label"></label>
+                <input asp-for="Edad_Paciente" class="form-control" />
+                <span asp-validation-for="Edad_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono_Paciente" class="control-label"></label>
+                <input asp-for="Telefono_Paciente" class="form-control" />
+                <span asp-validation-for="Telefono_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion_Paciente" class="control-label"></label>
+                <input asp-for="Direccion_Paciente" class="form-control" />
+                <span asp-validation-for="Direccion_Paciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> |
+                <a asp-controller="PacienteMainView" asp-action="MainIndex">Back to List</a>
+            </div>
+        </form>
     </div>
 </div>
+
+</>
 
