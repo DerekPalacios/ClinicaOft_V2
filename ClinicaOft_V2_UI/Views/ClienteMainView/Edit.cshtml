@@ -8,10 +8,9 @@
 
 <div style="margin-top:90px" class="containerCustom">
 
-    <br />
-
-    <div class="row">
-        <div class="col-md-4">
+    <h4>Editando Cliente</h4>
+    <hr />
+    <div class="col-6">
             <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id_Cliente" />
@@ -36,18 +35,11 @@
                     <span asp-validation-for="Direccion_Cliente" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <input type="submit" value="Save" class="btn btn-primary" /> |
+                        <a asp-controller="ClienteMainView" asp-action="MainIndex">Back to List</a>
                 </div>
             </form>
         </div>
     </div>
 
-
-
-
-</div>
-
-<div>
-    <a asp-action="MainIndex">Back to List</a>
-</div>
 
