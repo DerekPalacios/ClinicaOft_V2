@@ -16,11 +16,11 @@ body {
     grid-template-columns:20% 80%;
 }
 .sideBar {
-    margin:0px;
+    margin: 0px;
     height: 80vh;
     background: #f2f2f2;
-    width:100%;
-    max-width:250px;
+    width: 100%;
+    max-width: 250px;
 
     & ul {
         list-style: none;
@@ -35,13 +35,13 @@ body {
             border-right: 1px solid transparent;
             display: flex;
             justify-content: center;
-            
+
 
             &:hover {
                 border-color: $second-color;
             }
 
-            & button{
+            & button {
                 background: transparent;
                 border-radius: 10px;
                 width: 200px;
@@ -50,12 +50,30 @@ body {
                 text-align: left;
                 font-size: 20px;
                 font-family: $primary-font;
-                line-height:100%;
-              
-                
+                line-height: 100%;
+
+
                 &:hover {
                     background: $primary-color;
-                    color: $second-color;
+                    color: red;
+                }
+            }
+
+            & a {
+                background: transparent;
+                border-radius: 10px;
+                width: 200px;
+                height: 50px;
+                border: none;
+                text-align: left;
+                font-size: 20px;
+                font-family: $primary-font;
+                line-height: 100%;
+
+
+                &:hover {
+                    background: $primary-color;
+                    color: red;
                 }
             }
         }

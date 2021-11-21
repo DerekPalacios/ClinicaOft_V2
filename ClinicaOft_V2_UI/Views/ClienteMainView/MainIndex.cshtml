@@ -6,34 +6,32 @@
 }
 
 <div class="containerCustom">
-    <div class="grid-c-x2">
+   
 
         @* Menu Lateral*@
         <aside class="sideBar">
             <ul class="sideBarUL">
                 <li>
-                    <button type="button" class="btnSideBar">
+                    <a type="button" href="#headClientes">
                         Clientes
-
-                    </button>
+                    </a>
                 </li>
-
                 <li>
-                    <button class="btnSideBar">
+                    <a type="button" href="#headCuentas">
                         Cuentas
-
-                    </button>
+                    </a>
                 </li>
-
                 <li>
-                    <button class="btnSideBar">
-                        Historial de Cuentas
-                    </button>
+                    <a type="button" href="#headClientes">
+                        Cuentas
+                    </a>
                 </li>
             </ul>
         </aside>
 
-        <div class="container-fluid">
+        <div class="Container-fluid">
+            <div id="headClientes" style="height:90px;"></div> @*esto es para que se ubique bien la primer etiqueta*@
+
             <div class="row mt-2">
                 <div class="col-sm-6">
                     <h3>Lista de Clientes Ingresados</h3>
@@ -42,13 +40,12 @@
                     <a class="btn btn-success d-block" asp-action="Create" asp-controller="ClienteMainView">Nuevo Cliente</a>
                 </div>
             </div>
-
-            <br />
-            <div class="row w-100 h-75 overflow-auto  m-auto">
+            <hr />
+            <div style="max-height:700px" class="row w-100 h-50 overflow-auto  m-auto ">
                 @if (Model.Count() > 0)
                 {
                     <table class="table table-hover">
-                        <thead>
+                        <thead class="sticky-top " style="background:#fff">
                             <tr>
                                 <th>
                                     @Html.DisplayNameFor(model => model.Nombres_Cliente)
@@ -81,10 +78,10 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Direccion_Cliente)
                                     </td>
-                                    <td >
+                                    <td>
                                         <a asp-controller="ClienteMainView" class=" text-decoration-none" asp-action="Edit" asp-route-id="@item.Id_Cliente">
                                             <img src="~/src/pencil.svg" alt="del-img-trash" class="editPencil" />
-                                        </a> | 
+                                        </a> |
                                         <a asp-action="Delete" class=" text-decoration-none" asp-route-id="@item.Id_Cliente">
                                             <img src="~/src/trash.svg" alt="edit-img-pencil" class="deleteTrash" />
                                         </a>
@@ -105,26 +102,20 @@
 
 
 
-            <div class="container-fluid">
+
+            <div style="margin-top:20px">
                 <div class="row mt-2">
-                <div class="col-sm-6">
-                    <h3>Cuentas</h3>
+                    <div class="col-sm-6" id="headCuentas">
+                        <h3>Cuentas</h3>
+                    </div>
+                    <div class="col-sm-2">
+                        <a class="btn btn-success d-block">Crear Cuenta</a>
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-success d-block">Crear Cuenta</a>
+                <hr />
+                <div style="max-height:700px" class="row w-100 h-50 overflow-auto  m-auto ">
+                     @await Component.InvokeAsync("cuentaClienteTable")
                 </div>
-            </div>
-
-            <div>
-
-
-
-
-            </div>
-
-
-
-
             </div>
 
 
@@ -133,7 +124,7 @@
 
         </div>
 
-    </div>
+ 
 
 
 
