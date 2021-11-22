@@ -21,6 +21,8 @@ namespace ClinicaOft_V2_UI.Controllers
         public IActionResult Create()
         {
             return View();
+            //descomenta esta linea y comenta la de arriba para el modal
+            /*return RedirectToAction("MainIndex");*/
         }
 
 
